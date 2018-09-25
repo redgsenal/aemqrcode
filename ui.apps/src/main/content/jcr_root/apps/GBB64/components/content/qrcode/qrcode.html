@@ -1,0 +1,13 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-use.qrcode="com.tribal.gbb64.core.models.QRCodeModel">
+	<div class="container">
+		<sly data-sly-test="${wcmmode.edit}"> <i>Edit Mode:</i> </sly>
+		<h1>QR Code Generator: </h1>
+		<p>Test QR</p>
+		<p>URL: <a target="_blank" href="${qrcode.url}">${qrcode.url}</a></p>
+		<p>Width / Length: ${qrcode.width}</p>
+		<a href="/bin/gbb64/qrcodegenerator?s=${qrcode.url}&w=${qrcode.width}" target="_blank">
+			<img src="/bin/gbb64/qrcodegenerator?s=${qrcode.url}&w=${qrcode.width}"/>
+		</a> 
+	</div>
+</sly>
