@@ -6,8 +6,12 @@
 		<p>Test QR</p>
 		<p>URL: <a target="_blank" href="${qrcode.url}">${qrcode.url}</a></p>
 		<p>Width / Length: ${qrcode.width}</p>
-		<a href="/bin/gbb64/qrcodegenerator?s=${qrcode.url}&w=${qrcode.width}" target="_blank">
-			<img src="/bin/gbb64/qrcodegenerator?s=${qrcode.url}&w=${qrcode.width}"/>
-		</a> 
+		<a href="${qrcode.url}" target="_blank">
+			<img width="${qrcode.width}" src="/bin/gbb64/qrcodegenerator?s=${qrcode.url}&w=${qrcode.width}"/>
+		</a>
+		<br/>
+		<a href="${qrcode.url}" target="_blank">
+			<img width="${qrcode.width}" src="/libs/wcm/mobile/qrcode.png?url=${qrcode.url}"/>
+		</a>
 	</div>
 </sly>

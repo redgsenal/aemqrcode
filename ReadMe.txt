@@ -9,3 +9,8 @@ install to localhost:7502
 
 OSGi
 > match the version number from the OSGi MANIFEST.MF with the core bundle's pom Import-Package version.  If conflict found, increment the version and match.
+
+How to enable AEM QR Code:
+1) http://localhost:7502/system/console/configMgr -> AEM WCM QR-Code Generator Servlet (com.adobe.cq.wcm.mobile.qrcode.servlet.QRCodeImageGenerator)
+2) Change whitelist to ^https?:\/\/(.*) and save
+3) Test: http://localhost:7502/libs/wcm/mobile/qrcode.png?url=http://gbb.sg/ahawldw
