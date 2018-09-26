@@ -13,5 +13,9 @@
 		<a href="${qrcode.url}" target="_blank">
 			<img width="${qrcode.width}" src="/libs/wcm/mobile/qrcode.png?url=${qrcode.url}"/>
 		</a>
+		<a href="${qrcode.url}" target="_blank">
+			<img src="data:image/jpg;base64,${qrcode.base64Image}" width="${qrcode.width}"/>			
+		</a>
+		
 	</div>
 </sly>

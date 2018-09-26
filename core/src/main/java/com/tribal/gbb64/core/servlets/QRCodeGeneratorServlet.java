@@ -82,7 +82,6 @@ public class QRCodeGeneratorServlet extends SlingSafeMethodsServlet {
 		try {
 			return URLDecoder.decode(s, ENCODE_TYPE);
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return "";

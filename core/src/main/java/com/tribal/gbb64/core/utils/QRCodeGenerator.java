@@ -7,6 +7,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Base64;
 
 public class QRCodeGenerator {   
 	private static final int MIN_RANGE = 300;
@@ -27,6 +28,10 @@ public class QRCodeGenerator {
         ByteArrayOutputStream pngOutputStream = new ByteArrayOutputStream();
         MatrixToImageWriter.writeToStream(qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, setLimit(width), setLimit(height)), IMAGE_TYPE, pngOutputStream);
         return pngOutputStream.toByteArray();
+    }
+    
+    public String getQRCodeImageBase64Image(String text, String w) throws WriterException, IOException {
+    	return Base64.getEncoder().encodeToString(this.getQRCodeImageByteArray(text, w));
     }
     
     private int setLimit(int v) {
